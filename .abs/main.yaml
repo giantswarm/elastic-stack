@@ -1,0 +1,9 @@
+replace-app-version-with-git: false
+replace-chart-version-with-git: false
+generate-metadata: true
+chart-dir: ./helm/efk-stack-app
+destination: ./build
+# CI overwrites this, check .circleci/config.yaml
+catalog-base-url: https://giantswarm.github.com/default-catalog/
+
+skip-steps: validate

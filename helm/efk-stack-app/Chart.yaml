@@ -2,19 +2,19 @@ apiVersion: v2
 appVersion: 0.5.4
 dependencies:
 - name: elasticsearch-curator
-  repository: file://.
+  repository: file://charts/elasticsearch-curator
   version: 2.0.3
 - name: fluentd-elasticsearch
-  repository: file://.
+  repository: file://charts/fluentd-elasticsearch
   version: 6.1.1
 - name: opendistro-certs
-  repository: file://.
+  repository: file://charts/opendistro-certs
   version: 0.1.0
 - name: opendistro-es
-  repository: file://.
+  repository: file://charts/opendistro-es
   version: 1.13.2
 - name: elasticsearch-exporter
-  repository: file://.
+  repository: file://charts/elasticsearch-exporter
   version: 3.0.0
 description: Open Distro for Elasticsearch
 engine: gotpl

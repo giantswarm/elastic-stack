@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  architect: giantswarm/architect@2.11.0
+  architect: giantswarm/architect@dev:split-app-testing
 
 workflows:
   package-and-push-chart-on-tag:
@@ -11,6 +11,7 @@ workflows:
           app_catalog: giantswarm-catalog
           app_catalog_test: giantswarm-test-catalog
           executor: app-build-suite
+          persist_chart_archive: true
           # Trigger job on git tag.
           filters:
             tags:
@@ -27,14 +28,12 @@ workflows:
             tags:
               ignore: /^v.*/
 
-      - architect/run-tests-with-abs:
+      - architect/run-tests-with-ats:
           name: execute chart tests
           requires:
             - hold app tests
             - package and push efk-stack-app chart
           resource_class: 2xlarge
-          chart_dir: ./helm/efk-stack-app
-          app-build-suite_container_tag: "0.1.8"
           filters:
             # Do not trigger the job on master branch or release tags.
             branches:

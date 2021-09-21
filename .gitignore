@@ -6,10 +6,11 @@ __pycache__
 .pytest_cache
 .pytest-kube
 .vscode
+.devcontainer/
 test/kat/.idea/
 **/.python-version
 efk-stack-app*.tgz*
 test-results/
 **/.idea
 build/
-helm/efk-stack-app/tests/abs/test_results*.xml
+tests/ats/test_results*.xml

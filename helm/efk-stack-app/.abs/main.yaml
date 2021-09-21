@@ -1,9 +1,0 @@
-replace-chart-version-with-git: true
-replace-app-version-with-git: true
-generate-metadata: true
-catalog-base-url: https://giantswarm.github.io/giantswarm-catalog/
-functional-tests-cluster-type: kind
-smoke-tests-cluster-type: kind
-smoke-tests-cluster-config-file: helm/efk-stack-app/tests/kind_config.yaml
-functional-tests-cluster-config-file: helm/efk-stack-app/tests/kind_config.yaml
-app-tests-app-config-file: example_values/kind.yaml
